@@ -1,0 +1,103 @@
+<DOCTYPE html>
+<html>
+    <head>
+	<meta content="text/html" charset="UTF-8">
+	<title>LJY Blog</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+		function getTime() {
+		
+			var dateObj = new Date();
+		
+			var year = dateObj.getFullYear();//年
+			var month = dateObj.getMonth()+1;//月  (注意：月份+1)
+			var date = dateObj.getDate();//日
+			var day = dateObj.getDay();
+			var weeks = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+			var week = weeks[day];//根据day值，获取星期数组中的星期数。
+			var hours = dateObj.getHours();//小时
+			var minutes = dateObj.getMinutes();//分钟
+			var seconds = dateObj.getSeconds();//秒
+		
+			if(month<10){
+				month = "0"+month;
+			}
+			if(date<10){
+				date = "0"+date;
+			}
+			if(hours<10){
+				hours = "0"+hours;
+			}
+			if(minutes<10){
+				minutes = "0"+minutes;
+			}
+			if(seconds<10){
+				seconds = "0"+seconds;
+			}
+		
+			var newDate = year+"年"+month+"月"+date+"日"+hours+":"+minutes+":"+seconds+"&nbsp &nbsp"+week;
+			document.getElementById("date1").innerHTML = "时间：" + newDate;//在div中写入时间
+			setTimeout('getTime()', 500);//每隔500ms执行一次getTime()
+		}
+		</script>
+    <style>
+	body {
+	background-image: url("board.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	}
+	.roundedCorner2{
+	width:100%;
+	height:170px;
+	background-color:rgb(222, 211, 211);
+	border-radius:10px;
+	text-align: center;
+	opacity: 0.5;
+	filter: progid:DXImageTransform.Microsoft.alpha(opacity=50)
+	}
+	.content {
+           	 background-color: rgb(87, 87, 92);
+           	 position: absolute;
+          	 top: 50%;
+         	 height: 30%;
+            	 margin-top: -15%;
+           }
+	</style>
+         </head>
+    <body onload="getTime()">
+	<div class="roundedCorner"> 
+		<img src="head.png" width="4%" alt="头像">
+		<span style="font-size: 70px">LJY Blog</span>
+	</div>
+	</br>
+	<a href=""><button class="btn"><span>未完成</span></button></a><a href="WeChat.html"><button class="btn"><span>WeChat</span></button></a><a href="QQ.html"><button class="btn"><span>QQ</span></button></a><a href=""><button class="btn"><span>未完成</span></button></a><a href="https://bilibili.com"><button class="btn"><span>Bililbili</span></button></a>
+	</br></br>
+	<!--a href="time.html">
+		<button class="btn2">
+			<div id="date1"></div>
+		</button>
+	</a-->
+    </br></br>
+</br>
+<div class="roundedCorner3">
+	</br>
+	<h3>&nbsp;&nbsp;&nbsp;&nbsp; 测试</h3></br>
+	<h7>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 测试发的</h7></br></br>
+	<p style='text-align:right'>
+		<h7>LJY,2023,May,13th&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h7></br>
+	</p>
+</div>
+</br>
+	<div class="roundedCorner3">
+	    </br>
+		<h3>&nbsp;&nbsp;&nbsp;&nbsp; 测试</h3></br>
+		<h7>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 测试发的</h7></br></br>
+		<p style='text-align:right'>
+			<h7>LJY,2023,May,13th&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h7></br>
+		</p>
+	</div>
+	</br>
+</br></br></br></br></br></br></br></br></br>
+    </body>
+</html>
